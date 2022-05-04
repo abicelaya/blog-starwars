@@ -1,15 +1,58 @@
 import React from "react";
-import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
+import {Cards} from "../component/cards";
+
 
 export const Home = () => (
-	<div className="text-center mt-5">
-		<h1>Hello Rigo!</h1>
-		<p>
-			<img src={rigoImage} />
-		</p>
-		<a href="#" className="btn btn-success">
-			If you see this green button, bootstrap is working
-		</a>
+	<div className="container-fluid">
+		<div className="row" id="personajes">	
+		<h1>Personajes</h1>
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+	
+		</div>
+
+		<div className="row" id="planetas">
+		<h1>Planetas</h1>
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		</div>
+
+		<div className="row" id="naves">
+		<h1>Naves</h1>
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		<Cards />
+		</div>
+
+
+		
+
+
+		
+		
 	</div>
 );

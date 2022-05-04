@@ -1,0 +1,48 @@
+
+
+
+.container-fluid {
+    max-width: 1600px;
+}
+
+
+#personajes { 
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+        overflow-x: auto;
+        overflow-y: hidden;
+        width: auto;
+        white-space: nowrap;
+}
+
+#planetas { 
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: auto;
+    white-space: nowrap;
+}
+
+#naves { 
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: auto;
+    white-space: nowrap;
+}
+
+.card {
+    
+        width: 17rem;
+        height: 25rem;
+        
+        margin-bottom: 1rem;
+}
+
+.card-img-top {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
