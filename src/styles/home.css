@@ -1,48 +1,45 @@
 
 
+.container{
+    width: 100%;
+    display:block;
+    overflow:hidden;
+  }
+  .carousel{
+    display:block;
+    width: 100%;
 
-.container-fluid {
-    max-width: 1600px;
+    background: white;
+    overflow-x: scroll;
+    padding: 10px;
+    margin-bottom: 2rem;
+    white-space: nowrap; 
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+  }
+  .item {
+      display: inline-block;
+      width: 380px;
+      margin: 0 10px;
+      height: 380px;
+      background: rgba(0, 0, 0, 0.05) no-repeat center center;
+      background-size: cover;
+      position:relative;
+      border-radius: 20px;
+      box-shadow: 0 0 10px #dfdfdf;
 }
-
-
-#personajes { 
-        margin-top: 2rem;
-        margin-bottom: 4rem;
-        overflow-x: auto;
-        overflow-y: hidden;
-        width: auto;
-        white-space: nowrap;
-}
-
-#planetas { 
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    width: auto;
-    white-space: nowrap;
-}
-
-#naves { 
-    margin-top: 2rem;
-    margin-bottom: 4rem;
-    overflow-x: auto;
-    overflow-y: hidden;
-    width: auto;
-    white-space: nowrap;
-}
-
 .card {
     
         width: 17rem;
-        height: 25rem;
+        height: 30rem;
+        overflow: hidden;
+        white-space: nowrap;
+        text-align: left;
         
-        margin-bottom: 1rem;
+      
 }
-
 .card-img-top {
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
+    
+    object-fit: contain;
+    
 }

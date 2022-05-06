@@ -1,6 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
+			character: [],
 			demo: [
 				{
 					title: "FIRST",
@@ -19,11 +20,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
 			},
-			loadSomeData: () => {
-				/**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
+			loadSomeCharacter: async () => {
+				await fetch('https://rickandmortyapi.com/api/character')
+				.then(response => response.json())
+				.then(data => {console.log(data.results)
+				setStore({character:data.results})})
+				.catch(error => console.log("se ha producido un error", error))
 			},
+			loadSomeEpisode: async () => {
+				await fetch('https://rickandmortyapi.com/api/episode')
+				.then(response => response.json())
+				.then(data => {console.log(data.results)
+				setStore({episode:data.results})})
+				.catch(error => console.log("se ha producido un error", error))
+			},
+
 			changeColor: (index, color) => {
 				//get the store
 				const store = getStore();
