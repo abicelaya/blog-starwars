@@ -1,9 +1,18 @@
+body{
+  background-image: url("https://img2.wallspic.com/previews/8/4/7/5/3/135748/135748-la_astrofotografa-x750.jpg");
+} 
+.logo{
+  padding-left: 10rem;
+}
 
-
+.favorites{ 
+  margin-right: 10rem;
+}
 .container{
     width: 100%;
     display:block;
     overflow:hidden;
+    
   }
   .carousel{
     display:block;
@@ -37,6 +46,10 @@
         text-align: left;
         
       
+}
+
+.learnMore{
+  margin-right: 6rem;
 }
 .card-img-top {
     

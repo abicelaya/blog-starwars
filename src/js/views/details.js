@@ -29,7 +29,7 @@ export const Details= (props) => {
 		{character?.origin.name}
 		
 		<Link to="/">
-			<button className="btn btn-primary">Back home</button>
+			<button className="btn btn-primary">Home</button>
 		</Link>
 			
 			

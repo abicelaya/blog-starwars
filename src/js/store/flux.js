@@ -2,6 +2,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			character: [],
+			favChar: [],
+			favEpi: [],
 			demo: [
 				{
 					title: "FIRST",
@@ -23,8 +25,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 			loadSomeCharacter: async () => {
 				await fetch('https://rickandmortyapi.com/api/character')
 				.then(response => response.json())
-				.then(data => {console.log(data.results)
-				setStore({character:data.results})})
+				.then(data => {
+					console.log(data.results)
+					setStore({character:data.results})
+				})
 				.catch(error => console.log("se ha producido un error", error))
 			},
 			loadSomeEpisode: async () => {
@@ -34,6 +38,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({episode:data.results})})
 				.catch(error => console.log("se ha producido un error", error))
 			},
+
+			addFav:(newFavs)=>{
+				setStore({favChar: newFavs})
+			},
+
+			
 
 			changeColor: (index, color) => {
 				//get the store
