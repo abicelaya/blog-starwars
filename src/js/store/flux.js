@@ -2,6 +2,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			character: [],
+			episode: [],
 			favChar: [],
 			favEpi: [],
 			demo: [

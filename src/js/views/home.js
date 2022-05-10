@@ -29,7 +29,7 @@ return (
 			store.episode?.map((obj, i)=>{
 		
 
-				return <Cards key={i} title={obj.name} text={obj.episode} date={obj.air_date} image="https://es.web.img3.acsta.net/pictures/18/10/31/17/34/2348073.jpg"/>
+				return <Cards key={i} id={obj.id} title={obj.name} text={obj.episode} date={obj.air_date} type="episode"/>
 			})
 		},
 
