@@ -5,7 +5,7 @@ import rickAndMorty from "../../img/rickAndMorty.png"
 import { Context } from "../store/appContext";
 
 export const Navbar = () => {
-
+	
 	const {store, actions} = useContext(Context)
 	return (
 		<div className="container-fluid">
@@ -13,15 +13,23 @@ export const Navbar = () => {
 			<Link to="/">
 				<img src={logoImagen} style={{width: "7rem"}}/>
 			</Link>
+			<img id="imagenRam" src={rickAndMorty} style={{width: "25rem"}}/>
 	
 			<div className="dropdown">
-			<img id="imagenRam" src={rickAndMorty} style={{width: "25rem"}}/>
 			<button className="btn btn-link dropdown-toggle favorites" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 				Favorites
 			</button>
 			<ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 				{store.favChar.map( (favName, idx)=> {
-					return <li className="dropdown-item" key={idx}>{favName}</li>
+					return <li className="dropdown-item" key={idx}>{favName} 
+					
+					<button id="delete"
+						onClick={() => {
+							const result = store.favChar.filter( (val, id) => id != idx)
+							actions.updateFav(result);
+						}}>
+						X
+					</button></li>
 				})}
 			</ul>
 			</div>

@@ -19,7 +19,7 @@ import { Context } from '../store/appContext';
     <button type="button" className="btn btn-link" onClick={
       ()=>{
         if (!store.favChar.includes(props.title)) {
-        actions.addFav([...store.favChar, props.title])
+        actions.updateFav([...store.favChar, props.title])
 
         }
 

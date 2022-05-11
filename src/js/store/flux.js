@@ -40,11 +40,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 				.catch(error => console.log("se ha producido un error", error))
 			},
 
-			addFav:(newFavs)=>{
+			updateFav:(newFavs)=>{
 				setStore({favChar: newFavs})
 			},
-
-			
 
 			changeColor: (index, color) => {
 				//get the store
