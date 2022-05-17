@@ -13,8 +13,9 @@ export const Navbar = () => {
 			<Link to="/">
 				<img src={logoImagen} style={{width: "7rem"}}/>
 			</Link>
+			
 			<img id="imagenRam" src={rickAndMorty} style={{width: "25rem"}}/>
-	
+			
 			<div className="dropdown">
 			<button className="btn btn-link dropdown-toggle favorites" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 				Favorites
